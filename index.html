@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login - SOP SKIP</title>
+
+    <style>
+    @media print { body { -webkit-print-color-adjust: exact; } }
+    body { font-family: "Times New Roman", Times, serif; font-size: 12pt; margin: 0; background:#f5f7fb; color:#222; }
+    .container { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); padding: 24px; }
+    header { display:flex; align-items:center; gap:16px; border-bottom: 3px solid #e6eef9; padding-bottom:12px; margin-bottom:18px; }
+    header img { width:70px; height:70px; object-fit:contain; border-radius:8px; background:#fff; padding:6px; }
+    header h1 { margin:0; font-size:16pt; color:#0b63a7; }
+    .subtitle { font-size:10pt; color:#555; margin-top:4px; }
+    nav { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+    nav a { background:#e9f3fb; color:#0b63a7; padding:8px 12px; border-radius:6px; text-decoration:none; font-size:11pt; border:1px solid rgba(11,99,167,0.08); }
+    .form-card { background:#fbfdff; padding:14px; border-radius:8px; border:1px solid #eef6ff; }
+    label { display:block; margin-top:10px; font-weight:600; font-size:11pt; }
+    input[type="text"], input[type="date"], input[type="number"], textarea, select { width:100%; padding:8px 10px; margin-top:6px; border-radius:6px; border:1px solid #d6e9fb; background:#fff; font-family: inherit; font-size:12pt; }
+    textarea { min-height:120px; resize:vertical; }
+    .row { display:flex; gap:12px; }
+    .col { flex:1; }
+    .buttons { display:flex; gap:10px; margin-top:16px; }
+    button, .btn { background:#0b63a7; color:#fff; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600; }
+    .btn-secondary { background:#6c7a89; }
+    footer { margin-top:18px; font-size:10pt; color:#666; text-align:right; }
+    .note { font-size:10pt; color:#444; margin-top:10px; }
+    .login-box { max-width:420px; margin:40px auto; }
+    .center { text-align:center; }
+    .menu-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    @media (max-width:640px) { .menu-grid { grid-template-columns:1fr; } header h1 { font-size:14pt; } }
+    </style>
+
+</head>
+<body>
+<div class="container login-box">
+  <header class="center">
+    <img src="grobogan.png" alt="Logo">
+    <div>
+      <h1>PEMERINTAH KABUPATEN GROBOGAN</h1>
+      <div class="subtitle">DINAS PERINDUSTRIAN DAN PERDAGANGAN - APLIKASI SOP SKIP</div>
+    </div>
+  </header>
+
+  <div class="form-card">
+    <form id="loginForm" onsubmit="event.preventDefault(); window.location='menu.html';">
+      <label>Username</label>
+      <input type="text" name="username" required>
+      <label>Password</label>
+      <input type="password" name="password" required>
+      <div class="buttons">
+        <button type="submit">Masuk</button>
+        <button type="button" class="btn-secondary" onclick="document.getElementById('loginForm').reset()">Reset</button>
+      </div>
+      <p class="note">Gunakan username dan password yang valid untuk masuk. </p>
+    </form>
+  </div>
+  <footer>© Dinas Perindustrian dan Perdagangan Kabupaten Grobogan</footer>
+</div>
+</body>
+</html>
